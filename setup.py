@@ -23,13 +23,13 @@ Topic :: Software Development :: Testing
 """[1:-1]
 
 setup(
-    name         = 'robotframework-ncclient',
+    name         = 'robotframework-ncclient2',
     version      = VERSION,
-    description  = 'Robot Framework keyword library wrapper around ncclient',
+    description  = 'High quality, well-documented successor to unmaintained robotframework-ncclient',
     long_description = DESCRIPTION,
-    author       = 'Mallikarjunarao Kosuri',
-    author_email = 'venkatamallikarjunarao.kosuri@adtran.com',
-    url          = 'https://github.com/vkosuri/robotframework-ncclient',
+    author       = 'Scott Carrion',
+    author_email = 'scott.carrion@icloud.com',
+    url          = 'https://github.com/scott-carrion/robotframework-ncclient2',
     license      = 'Public Domain',
     keywords     = 'robotframework test automation NETCONF client',
     platforms    = 'any',
