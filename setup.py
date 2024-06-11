@@ -25,7 +25,7 @@ Topic :: Software Development :: Testing
 setup(
     name         = 'robotframework-ncclient2',
     version      = VERSION,
-    description  = 'High quality, well-documented successor to unmaintained robotframework-ncclient',
+    description  = 'Fork of robotframework-ncclient with proper documentation, asynchronous operation support, and more',
     long_description = DESCRIPTION,
     author       = 'Scott Carrion',
     author_email = 'scott.carrion@icloud.com',
