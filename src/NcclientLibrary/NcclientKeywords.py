@@ -627,6 +627,26 @@ class NcclientKeywords(object):
             logger.error(str(e))
             raise str(e)
 
+    def close_all_sessions(self):
+        """
+        Request graceful termination of all active NETCONF sessions, and also close the
+        transport for each.
+        """
+
+        # Although a robot.utils.ConnectionCache technically does not require a
+        # connection to have an alias, we mandate its usage in this library and
+        # as such it is reasonable to assume an alias exists for each session
+        try:
+            logger.info("Gracefully closing all active NETCONF sessions")
+            for alias in self._cache._aliases:
+                logger.info("Closing connection with alias '%s'" % alias)
+                session = self._cache.switch(alias)
+                session.close_session()
+
+        except NcclientException as e:
+            logger.error(str(e))
+            raise str(e)
+
     def kill_session(self, alias, session_id):
         """
         Force the termination of a NETCONF session by session ID.
